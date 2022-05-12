@@ -1,4 +1,5 @@
 .contact {
+  height: 100vh;
   background: hsla(16, 100%, 76%, 1);
   background: linear-gradient(
     90deg,
@@ -18,7 +19,7 @@ form {
 .contact button {
   width: 100%;
   height: 60px;
-  box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
 }
 
 .contact-input {
@@ -34,7 +35,7 @@ form {
   padding: 22px 30px 22px 54px;
   border: 0;
   border-radius: 4px;
-  box-shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow);
 }
 
 .contact-input input {

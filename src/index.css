@@ -17,6 +17,7 @@
   --color-highlight: 249, 98, 125;
 
   --transition: all 400ms ease;
+  --shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.1);
 }
 
 html {
@@ -86,10 +87,4 @@ a:hover {
   background-color: rgba(var(--color-highlight), 1);
   color: rgba(var(--color-bg), 1);
   border-color: transparent;
-}
-
-img {
-  display: block;
-  width: 100%;
-  object-fit: cover;
 }
