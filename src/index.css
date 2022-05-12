@@ -17,7 +17,8 @@
   --color-highlight: 249, 98, 125;
 
   --transition: all 400ms ease;
-  --shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.1);
+  --shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.3);
+  --light: 0 2px 124px 60px rgba(255, 255, 255, 0.2);
 }
 
 html {

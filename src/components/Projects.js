@@ -41,6 +41,16 @@ export default function Projects() {
         {projects.map(
           ({ title, img, description, tags, url, source, theme }, index) => (
             <div className="project-item-wrapper" key={index}>
+              <div className="project-preview">
+                <img
+                  src={require("../assets/" + img + "_screenshot.png")}
+                  alt={`${title} screenshot`}
+                  style={{
+                    transform: `rotate(${index % 2 === 0 ? "" : "-"}10deg)`,
+                    translate: `${index % 2 === 0 ? "54" : "12"}% 25%`,
+                  }}
+                />
+              </div>
               <div
                 className="project-item"
                 style={{
