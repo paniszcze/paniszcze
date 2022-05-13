@@ -15,10 +15,7 @@
   --color-text: 58, 51, 53;
   --color-primary: 198, 91, 124;
   --color-highlight: 249, 98, 125;
-
   --transition: all 400ms ease;
-  --shadow: 0 2px 24px 0 rgba(0, 0, 0, 0.3);
-  --light: 0 2px 124px 60px rgba(255, 255, 255, 0.2);
 }
 
 html {
@@ -51,7 +48,6 @@ h5 {
 section {
   margin: 0 auto;
   padding: 8rem 0;
-  height: max-content;
 }
 
 section > h2 {

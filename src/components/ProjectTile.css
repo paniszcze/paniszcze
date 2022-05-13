@@ -1,0 +1,115 @@
+.project-item-wrapper {
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.project-item {
+  width: 100%;
+  margin-top: 6rem;
+  padding: 2rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.reversed .project-item {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.project-preview {
+  background-color: transparent;
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.project-preview img {
+  width: 60%;
+  border: 2px solid rgba(var(--color-bg), 0.22);
+  border-radius: 8px;
+  transition: var(--transition);
+  transform: translate(54%, 25%) rotate(10deg);
+  box-shadow: 0 2px 124px 60px rgba(255, 255, 255, 0.2);
+}
+
+.project-item-wrapper:hover .project-preview img {
+  transform: translate(54%, 25%) rotate(10deg) scale(1.05);
+}
+
+.reversed .project-preview img {
+  transform: translate(12%, 25%) rotate(-10deg);
+}
+
+.project-item-wrapper.reversed:hover .project-preview img {
+  transform: translate(12%, 25%) rotate(-10deg) scale(1.05);
+}
+
+.project-description {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: start;
+  gap: 0.3rem;
+  z-index: 10;
+}
+
+.reversed .project-description {
+  justify-items: end;
+}
+
+.project-logo {
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.reversed .project-logo {
+  justify-content: flex-end;
+}
+
+.project-description p {
+  width: 50%;
+}
+
+.tag-list {
+  max-width: 50%;
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  z-index: 10;
+}
+
+.reversed .tag-list {
+  justify-content: flex-end;
+}
+
+.tag-list li {
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  color: rgba(var(--color-bg), 1);
+  background-color: rgba(var(--color-text), 0.7);
+  border-radius: 4px;
+}
+
+.external-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  z-index: 10;
+}
+
+.external-links a:hover {
+  transform: scale(1.2);
+  transition: all 0.2s ease;
+}

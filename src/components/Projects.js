@@ -1,6 +1,6 @@
 import "./Projects.css";
 
-import { FiCode, FiExternalLink } from "react-icons/fi";
+import ProjectTile from "./ProjectTile";
 
 const projects = [
   {
@@ -38,77 +38,9 @@ export default function Projects() {
       <h5>my work</h5>
       <h2>projects</h2>
       <div className="project-list">
-        {projects.map(
-          ({ title, img, description, tags, url, source, theme }, index) => (
-            <div className="project-item-wrapper" key={index}>
-              <div className="project-preview">
-                <img
-                  src={require("../assets/" + img + "_screenshot.png")}
-                  alt={`${title} screenshot`}
-                  style={{
-                    transform: `rotate(${index % 2 === 0 ? "" : "-"}10deg)`,
-                    translate: `${index % 2 === 0 ? "54" : "12"}% 25%`,
-                  }}
-                />
-              </div>
-              <div
-                className="project-item"
-                style={{
-                  backgroundColor: theme.primary,
-                  color: theme.text,
-                  alignItems: index % 2 === 0 ? "flex-start" : "flex-end",
-                  textAlign: index % 2 === 0 ? "left" : "right",
-                }}
-              >
-                <div className="project-description">
-                  <div
-                    className="project-logo"
-                    style={{
-                      justifyContent:
-                        index % 2 === 0 ? "flex-start" : "flex-end",
-                    }}
-                  >
-                    <img
-                      src={require("../assets/" + img + ".svg")}
-                      alt={`${title} logo`}
-                    />
-                  </div>
-                  <p>{description}</p>
-                </div>
-                <ul
-                  className="tag-list"
-                  style={{
-                    justifyContent: index % 2 === 0 ? "flex-start" : "flex-end",
-                  }}
-                >
-                  {tags.map((tag) => (
-                    <li key={tag}>{tag}</li>
-                  ))}
-                </ul>
-                <div className="external-links">
-                  <a
-                    style={{ color: theme.highlight }}
-                    href={source}
-                    rel="noreferrer"
-                    target="_blank"
-                    alt="view source code"
-                  >
-                    <FiCode />
-                  </a>
-                  <a
-                    style={{ color: theme.highlight }}
-                    href={url}
-                    rel="noreferrer"
-                    target="_blank"
-                    aly="view live demo"
-                  >
-                    <FiExternalLink />
-                  </a>
-                </div>
-              </div>
-            </div>
-          )
-        )}
+        {projects.map((project, index) => (
+          <ProjectTile key={index} {...project} index={index} />
+        ))}
       </div>
     </section>
   );
