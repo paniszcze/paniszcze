@@ -113,3 +113,44 @@
   transform: scale(1.2);
   transition: all 0.2s ease;
 }
+
+@media screen and (max-width: 1024px) {
+  .project-item,
+  .reversed .project-item {
+    margin-top: 3rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .project-item,
+  .reversed .project-item {
+    margin-top: 0;
+  }
+
+  .project-description,
+  .project-logo,
+  .reversed .project-description,
+  .reversed .project-logo {
+    justify-content: center;
+  }
+
+  .project-description p {
+    width: 100%;
+    text-align: center;
+  }
+
+  .tag-list,
+  .reversed .tag-list {
+    max-width: 80%;
+    margin-bottom: 26%;
+    justify-content: center;
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .tag-list,
+  .reversed .tag-list {
+    max-width: 100%;
+  }
+}
