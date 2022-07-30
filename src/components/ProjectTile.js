@@ -6,10 +6,10 @@ export default function ProjectTile({ title, img, description, tags, url, source
     const isReversed = index % 2 !== 0;
 
     return (
-        <div className={`project-item-wrapper ${isReversed ? ' reversed' : ''}`}>
+        <div className={`project-item-wrapper${isReversed ? ' reversed' : ''}`}>
             <div className="project-preview">
                 <img
-                    src={require('../assets/' + img + '_screenshot.png')}
+                    src={require('../assets/images/' + img + '_screenshot.png')}
                     alt={`${title} screenshot`}
                 />
             </div>
@@ -21,7 +21,7 @@ export default function ProjectTile({ title, img, description, tags, url, source
                 }}>
                 <div className="project-description">
                     <div className="project-logo">
-                        <img src={require('../assets/' + img + '.svg')} alt={`${title} logo`} />
+                        <img src={require('../assets/images/' + img + '.svg')} alt={`${title} logo`} />
                     </div>
                     <p>{description}</p>
                 </div>

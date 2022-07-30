@@ -1,18 +1,13 @@
-header {
+.hero {
     height: 100vh;
     padding-top: 7rem;
     overflow: hidden;
     background: hsla(139, 70%, 75%, 1);
     background: linear-gradient(60deg, hsla(139, 70%, 75%, 1) 0%, hsla(63, 90%, 76%, 1) 100%);
-}
-
-header .container {
     text-align: center;
-    height: 100%;
-    position: relative;
 }
 
-h1 span {
+.hero span {
     font-weight: 700;
 }
 

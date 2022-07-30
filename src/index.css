@@ -11,7 +11,7 @@
 }
 
 :root {
-    --color-bg: 255, 255, 255;
+    --color-bg: 245, 245, 245;
     --color-text: 58, 51, 53;
     --color-primary: 198, 91, 124;
     --color-highlight: 249, 98, 125;
@@ -45,20 +45,6 @@ h5 {
     font-weight: 500;
 }
 
-section {
-    margin: 0 auto;
-    padding: 8rem 0;
-}
-
-section > h2 {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-section > h5 {
-    text-align: center;
-}
-
 a {
     color: rgba(var(--color-primary), 1);
     transition: var(--transition);
@@ -69,7 +55,6 @@ a:hover {
 }
 
 .btn {
-    width: max-content;
     display: inline-block;
     color: rgba(var(--color-bg), 1);
     background: rgba(var(--color-primary), 1);

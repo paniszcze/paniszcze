@@ -17,9 +17,9 @@ export default function ContactForm() {
         axios.defaults.headers.post['Content-Type'] = 'application/json';
         axios
             .post('https://formsubmit.co/ajax/fcbd5982c19a580e2a116c6d12c1c8d9', {
-                name,
-                email,
-                message,
+                name: name,
+                email: email,
+                message: message,
             })
             .then((response) => console.log(response))
             .catch((error) => console.log(error));
@@ -28,57 +28,52 @@ export default function ContactForm() {
     };
 
     return (
-        <section id="contact" className="contact">
-            <h5>get in touch</h5>
-            <h2>contact</h2>
-
-            <form onSubmit={sendEmail}>
-                <div className="contact-input">
-                    <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder="name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        required
-                    />
-                    <label className="contact-icon" htmlFor="name">
-                        <FaUser />
-                    </label>
-                </div>
-                <div className="contact-input">
-                    <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="email address"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
-                    <label className="contact-icon" htmlFor="email">
-                        <FaAt />
-                    </label>
-                </div>
-                <div className="contact-input">
-                    <textarea
-                        name="message"
-                        id="message"
-                        rows="7"
-                        placeholder="message"
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                        required
-                    />
-                    <label className="contact-icon" htmlFor="message">
-                        <FaEnvelope />
-                    </label>
-                </div>
-                <button type="submit" className="btn">
-                    send message
-                </button>
-            </form>
-        </section>
+        <form onSubmit={sendEmail}>
+            <div className="contact-input">
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                />
+                <label className="contact-icon" htmlFor="name">
+                    <FaUser />
+                </label>
+            </div>
+            <div className="contact-input">
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="email address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                />
+                <label className="contact-icon" htmlFor="email">
+                    <FaAt />
+                </label>
+            </div>
+            <div className="contact-input">
+                <textarea
+                    name="message"
+                    id="message"
+                    rows="7"
+                    placeholder="message"
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    required
+                />
+                <label className="contact-icon" htmlFor="message">
+                    <FaEnvelope />
+                </label>
+            </div>
+            <button type="submit" className="btn">
+                send message
+            </button>
+        </form>
     );
 }

@@ -1,8 +1,4 @@
-import './Projects.css';
-
-import ProjectTile from './ProjectTile';
-
-const projects = [
+export const projects = [
     {
         title: 'exLibris',
         img: 'exlibris',
@@ -31,17 +27,3 @@ const projects = [
         theme: { primary: '#fad4c0', text: '#704e2e', highlight: '#c23866' },
     },
 ];
-
-export default function Projects() {
-    return (
-        <section className="projects">
-            <h5>my work</h5>
-            <h2>projects</h2>
-            <div className="project-list">
-                {projects.map((project, index) => (
-                    <ProjectTile key={index} {...project} index={index} />
-                ))}
-            </div>
-        </section>
-    );
-}
