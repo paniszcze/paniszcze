@@ -1,17 +1,17 @@
 .projects {
-  background: rgba(var(--color-bg), 1);
+    background: rgba(var(--color-bg), 1);
 }
 
 .project-list {
-  margin: 0 auto;
-  width: 60%;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+    margin: 0 auto;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
 }
 
 @media screen and (max-width: 1024px) {
-  .project-list {
-    width: 80%;
-  }
+    .project-list {
+        width: 80%;
+    }
 }

@@ -1,16 +1,16 @@
 .app {
-  width: var(--container-width-lg);
-  margin: 0 auto;
+    width: var(--container-width-lg);
+    margin: 0 auto;
 }
 
 @media screen and (max-width: 1024px) {
-  .app {
-    width: var(--container-width-md);
-  }
+    .app {
+        width: var(--container-width-md);
+    }
 }
 
 @media screen and (max-width: 600px) {
-  .app {
-    width: var(--container-width-sm);
-  }
+    .app {
+        width: var(--container-width-sm);
+    }
 }
