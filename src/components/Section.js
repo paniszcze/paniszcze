@@ -1,5 +1,3 @@
-import './Section.css';
-
 export default function Section({ title, subtitle, id, children }) {
     return (
         <section id={id}>

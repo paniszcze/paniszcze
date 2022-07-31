@@ -1,7 +1,5 @@
 import { projects } from '../assets/data/projects';
 
-import './ProjectList.css';
-
 import ProjectTile from './ProjectTile';
 
 export default function ProjectList() {

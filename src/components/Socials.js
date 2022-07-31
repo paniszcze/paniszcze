@@ -1,5 +1,3 @@
-import './Socials.css';
-
 import { FaLinkedinIn } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 

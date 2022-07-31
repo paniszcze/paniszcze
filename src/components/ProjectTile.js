@@ -1,5 +1,3 @@
-import './ProjectTile.css';
-
 import { FiCode, FiExternalLink } from 'react-icons/fi';
 
 export default function ProjectTile({ title, img, description, tags, url, source, theme, index }) {
@@ -21,7 +19,10 @@ export default function ProjectTile({ title, img, description, tags, url, source
                 }}>
                 <div className="project-description">
                     <div className="project-logo">
-                        <img src={require('../assets/images/' + img + '.svg')} alt={`${title} logo`} />
+                        <img
+                            src={require('../assets/images/' + img + '.svg')}
+                            alt={`${title} logo`}
+                        />
                     </div>
                     <p>{description}</p>
                 </div>

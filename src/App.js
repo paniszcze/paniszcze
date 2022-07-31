@@ -1,5 +1,3 @@
-import './App.css';
-
 import Hero from './components/Hero';
 import Section from './components/Section';
 import About from './components/About';

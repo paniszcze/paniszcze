@@ -1,0 +1,27 @@
+@use '../core/variables';
+
+.socials {
+    position: fixed;
+    top: 2rem;
+    right: 0;
+    transition: variables.$transition;
+
+    ul {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        &::after {
+            content: '';
+            width: 8rem;
+            height: 1px;
+            margin-bottom: 5px;
+            background-color: rgba(variables.$color-primary, 1);
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        visibility: hidden;
+        opacity: 0;
+    }
+}

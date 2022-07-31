@@ -1,0 +1,18 @@
+// CORE
+@use 'styles/core/base';
+@use 'styles/core/fonts';
+@use 'styles/core/app';
+
+// COMPONENTS
+@use 'styles/components/socials';
+@use 'styles/components/section';
+@use 'styles/components/project-list';
+@use 'styles/components/project-tile';
+@use 'styles/components/contact-form';
+
+// SECTIONS
+@use 'styles/sections/hero';
+@use 'styles/sections/about';
+@use 'styles/sections/experience';
+@use 'styles/sections/projects';
+@use 'styles/sections/contact';

@@ -1,3 +1,5 @@
+@use '../core/variables';
+
 form {
     margin: 0 auto;
     width: clamp(30%, 440px, 80%);
@@ -5,22 +7,14 @@ form {
     flex-direction: column;
     align-items: center;
     gap: 1.8rem;
+
+    button {
+        width: 100%;
+        height: 60px;
+    }
 }
 
-form button {
-    width: 100%;
-    height: 60px;
-}
-
-.contact-input {
-    width: 100%;
-    position: relative;
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-.contact-input input,
-.contact-input textarea {
+%form-element {
     position: relative;
     width: 100%;
     padding: 22px 30px 22px 54px;
@@ -28,15 +22,24 @@ form button {
     border-radius: 4px;
 }
 
-.contact-input input {
-    height: 60px;
-    overflow: visible;
-}
+.contact-input {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
 
-.contact-input textarea {
-    height: 160px;
-    resize: none;
-    overflow: auto;
+    input {
+        @extend %form-element;
+        height: 60px;
+        overflow: visible;
+    }
+
+    textarea {
+        @extend %form-element;
+        height: 160px;
+        resize: none;
+        overflow: auto;
+    }
 }
 
 .contact-icon {
@@ -50,7 +53,7 @@ form button {
 
 input:focus + .contact-icon,
 textarea:focus + .contact-icon {
-    color: rgba(var(--color-primary), 1);
+    color: rgba(variables.$color-primary, 1);
 }
 
 ::placeholder {

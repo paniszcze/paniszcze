@@ -1,0 +1,14 @@
+@use 'variables';
+
+.app {
+    width: variables.$container-width-lg;
+    margin: 0 auto;
+
+    @media screen and (max-width: 1024px) {
+        width: variables.$container-width-md;
+    }
+
+    @media screen and (max-width: 600px) {
+        width: variables.$container-width-sm;
+    }
+}
