@@ -2,19 +2,22 @@
 
 .socials {
     position: fixed;
-    top: 2rem;
-    right: 0;
+    bottom: 0;
+    left: 1.4rem;
     transition: variables.$transition;
+    z-index: 10;
 
     ul {
+        font-size: 1.4rem;
         display: flex;
+        flex-direction: column;
         align-items: center;
         gap: 1rem;
 
         &::after {
             content: '';
-            width: 8rem;
-            height: 1px;
+            width: 1px;
+            height: 8rem;
             margin-bottom: 5px;
             background-color: rgba(variables.$color-primary, 1);
         }

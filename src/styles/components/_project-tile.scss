@@ -1,27 +1,15 @@
 @use '../core/variables';
 
-.project-item-wrapper {
+$rotation: 12deg;
+$dx: 54%;
+$dx-reversed: 12%;
+$dy: 25%;
+
+.project-wrapper {
     position: relative;
     width: 100%;
     border-radius: 8px;
     overflow: hidden;
-}
-
-.project-item {
-    width: 100%;
-    margin-top: 6rem;
-    padding: 2rem;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: flex-start;
-    text-align: left;
-}
-
-.reversed .project-item {
-    align-items: flex-end;
-    text-align: right;
 }
 
 .project-preview {
@@ -29,130 +17,170 @@
     display: block;
     width: 100%;
     position: absolute;
-    bottom: 0;
+    top: 0;
     left: 0;
     z-index: 2;
+
+    @media screen and (max-width: 800px) {
+        top: auto;
+        bottom: 0;
+    }
 
     img {
         width: 60%;
         border: 2px solid rgba(variables.$color-bg, 0.22);
         border-radius: 8px;
         transition: variables.$transition;
-        transform: translate(54%, 25%) rotate(10deg);
+        transform: translate($dx, $dy) rotate($rotation);
         box-shadow: 0 2px 124px 60px rgba(255, 255, 255, 0.2);
+
+        .project-wrapper:hover & {
+            transform: translate($dx, $dy) rotate($rotation) scale(1.05);
+        }
     }
 }
 
-.project-item-wrapper:hover .project-preview img {
-    transform: translate(54%, 25%) rotate(10deg) scale(1.05);
-}
-
-.reversed .project-preview img {
-    transform: translate(12%, 25%) rotate(-10deg);
-}
-
-.project-item-wrapper.reversed:hover .project-preview img {
-    transform: translate(12%, 25%) rotate(-10deg) scale(1.05);
-}
-
-.project-description {
+.project-tile {
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-items: start;
-    gap: 0.3rem;
-    z-index: 10;
-
-    p {
-        width: 50%;
-    }
-}
-
-.reversed .project-description {
-    justify-items: end;
-}
-
-.project-logo {
-    height: 70px;
-    width: 100%;
+    margin-top: 5rem;
+    padding: 2rem;
+    border-radius: 8px;
     display: flex;
-    justify-content: flex-start;
-}
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+    text-align: left;
 
-.reversed .project-logo {
-    justify-content: flex-end;
-}
-
-.tag-list {
-    max-width: 50%;
-    display: flex;
-    gap: 0.6rem;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    z-index: 10;
-
-    li {
-        padding: 0.4rem 1rem;
-        font-size: 0.8rem;
-        color: rgba(variables.$color-bg, 1);
-        background-color: rgba(variables.$color-text, 0.7);
-        border-radius: 4px;
-    }
-}
-
-.reversed .tag-list {
-    justify-content: flex-end;
-}
-
-.external-links {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    z-index: 10;
-
-    a:hover {
-        transform: scale(1.2);
-        transition: all 0.2s ease;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .project-item,
-    .reversed .project-item {
+    @media screen and (max-width: 1024px) {
         margin-top: 3rem;
     }
-}
 
-@media screen and (max-width: 600px) {
-    .project-item,
-    .reversed .project-item {
-        margin-top: 0;
+    @media screen and (max-width: 600px) {
+        margin-top: 2rem;
     }
 
-    .project-description,
-    .project-logo,
-    .reversed .project-description,
-    .reversed .project-logo {
-        justify-content: center;
-    }
-
-    .project-description p {
+    .header {
         width: 100%;
-        text-align: center;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: start;
+        gap: 0.3rem;
+        z-index: 10;
+
+        @media screen and (max-width: 600px) {
+            justify-content: center;
+        }
+
+        p {
+            width: 50%;
+
+            @media screen and (max-width: 600px) {
+                width: 100%;
+                text-align: center;
+            }
+        }
     }
 
-    .tag-list,
-    .reversed .tag-list {
-        max-width: 80%;
-        margin-bottom: 26%;
-        justify-content: center;
-        align-self: center;
+    .logo {
+        height: 70px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+
+        @media screen and (max-width: 600px) {
+            justify-content: center;
+        }
+    }
+
+    .tag-list {
+        max-width: 50%;
+        display: flex;
+        gap: 0.6rem;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        z-index: 10;
+
+        @media screen and (max-width: 600px) {
+            max-width: 80%;
+            margin-bottom: 26%;
+            justify-content: center;
+            align-self: center;
+        }
+
+        @media screen and (max-width: 435px) {
+            max-width: 100%;
+        }
+
+        li {
+            padding: 0.4rem 1rem;
+            font-size: 0.8rem;
+            color: rgba(variables.$color-bg, 1);
+            background-color: rgba(variables.$color-text, 0.7);
+            border-radius: 4px;
+        }
+    }
+
+    .external-links {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        z-index: 10;
+
+        a:hover {
+            transform: scale(1.2);
+            transition: all 0.2s ease;
+        }
     }
 }
 
-@media screen and (max-width: 435px) {
-    .tag-list,
-    .reversed .tag-list {
-        max-width: 100%;
+.reversed {
+    .project-preview {
+        img {
+            transform: translate($dx-reversed, $dy) rotate(-$rotation);
+        }
+    }
+
+    &:hover {
+        .project-preview {
+            img {
+                transform: translate($dx-reversed, $dy) rotate(-$rotation) scale(1.05);
+            }
+        }
+    }
+
+    .project-tile {
+        align-items: flex-end;
+        text-align: right;
+
+        .header {
+            justify-items: end;
+
+            @media screen and (max-width: 600px) {
+                justify-content: center;
+            }
+        }
+
+        .logo {
+            justify-content: flex-end;
+
+            @media screen and (max-width: 600px) {
+                justify-content: center;
+            }
+        }
+
+        .tag-list {
+            justify-content: flex-end;
+
+            @media screen and (max-width: 600px) {
+                max-width: 80%;
+                margin-bottom: 26%;
+                justify-content: center;
+                align-self: center;
+            }
+
+            @media screen and (max-width: 435px) {
+                max-width: 100%;
+            }
+        }
     }
 }
