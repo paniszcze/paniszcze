@@ -3,9 +3,18 @@
 .socials {
     position: fixed;
     bottom: 0;
-    left: 1.4rem;
+    left: 4rem;
     transition: variables.$transition;
     z-index: 10;
+
+    @media screen and (max-width: 1024px) {
+        left: 4%;
+    }
+
+    @media screen and (max-width: 600px) {
+        visibility: hidden;
+        opacity: 0;
+    }
 
     ul {
         font-size: 1.4rem;
@@ -21,10 +30,5 @@
             margin-bottom: 5px;
             background-color: rgba(variables.$color-primary, 1);
         }
-    }
-
-    @media screen and (max-width: 600px) {
-        visibility: hidden;
-        opacity: 0;
     }
 }

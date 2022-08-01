@@ -1,3 +1,5 @@
+import { HiOutlineLocationMarker } from 'react-icons/hi';
+
 export default function Hero() {
     return (
         <div className="hero">
@@ -6,6 +8,9 @@ export default function Hero() {
                 my name is <span>daniel pański</span>
             </h1>
             <h2>i make things for the web</h2>
+            <div className="location">
+                <HiOutlineLocationMarker /> Barcelona, Spain
+            </div>
             <div className="cta">
                 <a href="#contact" className="btn">
                     contact me

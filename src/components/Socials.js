@@ -17,7 +17,10 @@ export default function Socials() {
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.codewars.com/users/paniszcze" rel="noreferrer" target="_blank">
+                    <a
+                        href="https://www.codewars.com/users/paniszcze"
+                        rel="noreferrer"
+                        target="_blank">
                         <SiCodewars />
                     </a>
                 </li>

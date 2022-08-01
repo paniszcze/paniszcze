@@ -1,3 +1,5 @@
+@use '../core/variables';
+
 .hero {
     height: 100vh;
     padding-top: 7rem;
@@ -8,6 +10,15 @@
 
     span {
         font-weight: 700;
+    }
+
+    .location {
+        height: 40px;
+        color: variables.$color-highlight;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
     }
 }
 
