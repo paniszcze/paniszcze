@@ -1,27 +1,49 @@
 @use '../core/variables';
 
 .hero {
-    height: 100vh;
-    padding-top: 7rem;
+    margin: 4rem auto;
+    padding: 2rem;
+    height: calc(100vh - 8rem);
     overflow: hidden;
     background: hsla(139, 70%, 75%, 1);
-    background: linear-gradient(60deg, hsla(139, 70%, 75%, 1) 0%, hsla(63, 90%, 76%, 1) 100%);
-    text-align: center;
+    background-image: radial-gradient(
+        circle farthest-corner at 10% 20%,
+        rgba(255, 252, 200, 1) 0%,
+        rgba(255, 247, 94, 1) 90%
+    );
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
 
-    span {
-        font-weight: 700;
+    @media screen and (max-width: 600px) {
+        justify-content: space-between;
+    }
+
+    h3 {
+        margin-top: 1rem;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+
+        @media screen and (max-width: 800px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
 
     .location {
         height: 40px;
-        color: variables.$color-highlight;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 0.5rem;
     }
-}
-
-.cta {
-    margin-top: 2.5rem;
 }

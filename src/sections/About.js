@@ -28,7 +28,7 @@ export default function About() {
                     experience.
                 </p>
                 <p>
-                    my interest in&nbsp;web goes back to&nbsp;late 2000's, when as
+                    my interest in&nbsp;web goes back to&nbsp;late 2000s, when as
                     a&nbsp;sixth-grader i&nbsp;used to&nbsp;make basic html websites about
                     dinosaurs. even though i&nbsp;didn't pursue a&nbsp;career in&nbsp;IT (nor
                     paleontology), after over a&nbsp;decade of&nbsp;university education

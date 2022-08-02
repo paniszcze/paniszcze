@@ -1,0 +1,93 @@
+@use '../core/variables';
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    .record {
+        min-height: 100px;
+        display: flex;
+        position: relative;
+
+        .content {
+            margin: 0 0 2rem;
+            padding: 0 2rem;
+            text-align: left;
+            flex: 1;
+
+            li {
+                margin: 0 1.6rem 0.5rem;
+                font-weight: 300;
+                line-height: 1.6rem;
+
+                &::before {
+                    content: '>';
+                    display: inline-block;
+                    width: 2rem;
+                    margin: 0 -1rem;
+                    color: variables.$color-primary;
+                }
+            }
+        }
+
+        .opposite {
+            margin-right: auto;
+            padding: 0 2rem;
+            text-align: right;
+            flex: 1;
+            font-size: 1.3rem;
+            font-weight: 300;
+        }
+
+        &:nth-of-type(even) {
+            flex-direction: row-reverse;
+
+            .content {
+                text-align: right;
+
+                ul {
+                    direction: rtl;
+                }
+            }
+
+            .opposite {
+                text-align: left;
+            }
+        }
+
+        &:last-of-type {
+            .content {
+                margin-bottom: 0;
+            }
+        }
+
+        p {
+            margin: 0.5rem 0 1rem;
+            font-weight: 300;
+            line-height: 1.7rem;
+        }
+
+        .separator {
+            display: flex;
+            flex-direction: column;
+            flex: 0;
+            align-items: center;
+
+            .dot {
+                margin: 6px 0;
+                padding: 7px;
+                background-color: variables.$color-primary;
+                border-radius: 50%;
+                display: flex;
+                align-self: baseline;
+            }
+
+            .line {
+                width: 1px;
+                background-color: variables.$color-text;
+                flex-grow: 1;
+            }
+        }
+    }
+}

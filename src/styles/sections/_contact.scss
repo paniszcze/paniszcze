@@ -1,0 +1,44 @@
+.contact {
+    text-align: right;
+    display: grid;
+    grid-template: repeat(2, max-content) / repeat(2, 1fr);
+    grid-template-areas:
+        'header decorator'
+        'form decorator';
+    gap: 2rem 3rem;
+
+    @media screen and (max-width: 800px) {
+        grid-template: repeat(3, max-content) / 1fr;
+        grid-template-areas:
+            'header'
+            'form'
+            'decorator';
+        gap: 1rem;
+    }
+
+    header {
+        grid-area: header;
+
+        @media screen and (max-width: 800px) {
+            h2,
+            h5 {
+                text-align: center;
+            }
+        }
+    }
+
+    form {
+        grid-area: form;
+    }
+
+    .decorator {
+        grid-area: decorator;
+        min-height: 200px;
+        background-image: linear-gradient(
+            299.8deg,
+            rgba(252, 255, 222, 1) 2.2%,
+            rgba(182, 241, 171, 1) 99.3%
+        );
+        border-radius: 8px;
+    }
+}

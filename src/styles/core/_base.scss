@@ -30,8 +30,16 @@ textarea {
 }
 
 section {
-    margin: 6rem auto;
+    margin: 10rem auto;
     padding: 0;
+
+    @media screen and (max-width: 800px) {
+        margin: 6rem auto;
+    }
+
+    @media screen and (max-width: 600px) {
+        margin: 4rem auto;
+    }
 }
 
 %header-big {

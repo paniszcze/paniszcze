@@ -7,7 +7,10 @@ export default function Socials() {
         <div className="socials">
             <ul>
                 <li>
-                    <a href="https://linkedin.com" rel="noreferrer" target="_blank">
+                    <a
+                        href="https://www.linkedin.com/in/daniel-pański-558497247/"
+                        rel="noreferrer"
+                        target="_blank">
                         <FaLinkedinIn />
                     </a>
                 </li>
