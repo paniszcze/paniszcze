@@ -1,9 +1,8 @@
-import Hero from './components/Hero';
-import Section from './components/Section';
-import About from './components/About';
-import ExperienceTimeline from './components/ExperienceTimeline';
-import ProjectList from './components/ProjectList';
-import ContactForm from './components/ContactForm';
+import Hero from './sections/Hero';
+import About from './sections/About';
+import Experience from './sections/Experience';
+import Projects from './sections/Projects';
+import Contact from './sections/Contact';
 import Socials from './components/Socials';
 
 export default function App() {
@@ -11,18 +10,10 @@ export default function App() {
         <div className="app">
             <Hero />
 
-            <Section title="about" subtitle="get to know me">
-                <About />
-            </Section>
-            <Section title="career" subtitle="relevant experience">
-                <ExperienceTimeline />
-            </Section>
-            <Section title="projects" subtitle="featured works">
-                <ProjectList />
-            </Section>
-            <Section title="contact" subtitle="get in touch" id="contact">
-                <ContactForm />
-            </Section>
+            <About />
+            <Experience />
+            <Projects />
+            <Contact />
 
             <Socials />
         </div>

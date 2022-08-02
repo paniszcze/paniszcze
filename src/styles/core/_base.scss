@@ -29,12 +29,43 @@ textarea {
     margin: 0;
 }
 
-h1,
-h2,
-h3,
-h4,
+section {
+    margin: 6rem auto;
+    padding: 0;
+}
+
+%header-big {
+    font-family: 'BioRhyme Expanded';
+    font-weight: 700;
+}
+
+%header-small {
+    font-weight: 400;
+}
+
+h1 {
+    @extend %header-big;
+    font-size: 3rem;
+}
+
+h2 {
+    @extend %header-big;
+    font-size: 2rem;
+}
+
+h3 {
+    @extend %header-small;
+    font-size: 1.7rem;
+}
+
+h4 {
+    @extend %header-small;
+    font-size: 1.3rem;
+}
+
 h5 {
-    font-weight: 500;
+    @extend %header-small;
+    font-size: 1rem;
 }
 
 a {

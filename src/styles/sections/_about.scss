@@ -1,22 +1,41 @@
 .about {
     text-align: left;
     display: grid;
-    grid-template: repeat(2, max-content) / repeat(2, 1fr);
+    grid-template: repeat(2, max-content) / 3fr 4fr;
     grid-template-areas:
-        'portrait description'
-        'portrait skills';
-    gap: 1rem;
+        'portrait header'
+        'portrait description';
+    gap: 2rem 3rem;
 
     @media screen and (max-width: 800px) {
         grid-template: repeat(3, max-content) / 1fr;
         grid-template-areas:
-            'description'
-            'skills'
-            'portrait';
+            'header'
+            'portrait'
+            'description';
+        gap: 1rem;
+    }
+
+    header {
+        grid-area: header;
+
+        @media screen and (max-width: 800px) {
+            h2,
+            h5 {
+                text-align: center;
+            }
+        }
     }
 
     .portrait {
         grid-area: portrait;
+        min-height: 200px;
+        background-image: radial-gradient(
+            circle farthest-corner at -0.1% 1.8%,
+            rgba(255, 77, 77, 0.7) 0%,
+            rgba(255, 184, 129, 0.34) 100.2%
+        );
+        border-radius: 8px;
     }
 
     .description {
@@ -26,12 +45,12 @@
             margin-bottom: 1rem;
             font-weight: 300;
             line-height: 1.7rem;
-            position: relative;
         }
     }
 
     .skills {
-        grid-area: skills;
+        margin: 1.7rem auto 0;
+        width: 100%;
         font-size: 2rem;
         display: flex;
         flex-flow: row wrap;

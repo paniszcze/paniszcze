@@ -46,7 +46,7 @@ export default function ContactForm() {
                     type="email"
                     name="email"
                     id="email"
-                    placeholder="email address"
+                    placeholder="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
