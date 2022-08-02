@@ -1,13 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.2d9c5e99.css",
-    "main.js": "/static/js/main.077ca5c6.js",
+    "main.css": "/static/css/main.2fabf511.css",
+    "main.js": "/static/js/main.1bc6b407.js",
+    "static/media/kana_flashcards_screenshot.png": "/static/media/kana_flashcards_screenshot.1bd2747278b26e3ab4f2.png",
+    "static/media/exlibris_screenshot.png": "/static/media/exlibris_screenshot.a7b9dbeec6d8f1469c5a.png",
+    "static/media/kiiboodo_screenshot.png": "/static/media/kiiboodo_screenshot.a1a5f38b06cab20b1cce.png",
+    "static/media/kana_flashcards.svg": "/static/media/kana_flashcards.c0372f3fd0b62d58f732.svg",
+    "static/media/kiiboodo.svg": "/static/media/kiiboodo.76f7df433bd9e71afd8e.svg",
+    "static/media/exlibris.svg": "/static/media/exlibris.fe6b42a6751393fa6376.svg",
     "index.html": "/index.html",
-    "main.2d9c5e99.css.map": "/static/css/main.2d9c5e99.css.map",
-    "main.077ca5c6.js.map": "/static/js/main.077ca5c6.js.map"
+    "main.2fabf511.css.map": "/static/css/main.2fabf511.css.map",
+    "main.1bc6b407.js.map": "/static/js/main.1bc6b407.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d9c5e99.css",
-    "static/js/main.077ca5c6.js"
+    "static/css/main.2fabf511.css",
+    "static/js/main.1bc6b407.js"
   ]
 }
