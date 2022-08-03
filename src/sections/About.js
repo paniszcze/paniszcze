@@ -22,13 +22,13 @@ export default function About() {
             </header>
             <div className="description">
                 <p>
-                    i'm a&nbsp;technical university graduate and&nbsp;natural languages afficionado
-                    with a&nbsp;passion for&nbsp;developping things for&nbsp;the&nbsp;web.
-                    i&nbsp;love creating practical applications centered around stunning user
+                    i'm a&nbsp;technical university graduate and&nbsp;natural languages aficionado
+                    with a&nbsp;passion for&nbsp;developing things for&nbsp;the&nbsp;web.
+                    i&nbsp;love creating practical applications centred around a&nbsp;stunning user
                     experience.
                 </p>
                 <p>
-                    my interest in&nbsp;web goes back to&nbsp;late 2000s, when as
+                    my interest in&nbsp;web goes back to&nbsp;the late 2000s, when as
                     a&nbsp;sixth-grader i&nbsp;used to&nbsp;make basic html websites about
                     dinosaurs. even though i&nbsp;didn't pursue a&nbsp;career in&nbsp;IT (nor
                     paleontology), after over a&nbsp;decade of&nbsp;university education
