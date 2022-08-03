@@ -70,7 +70,7 @@ export default function ContactForm() {
                 </label>
             </div>
             <button type="submit" className="btn">
-                send message
+                send
             </button>
         </form>
     );

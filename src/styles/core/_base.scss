@@ -43,8 +43,7 @@ section {
 }
 
 %header-big {
-    font-family: 'BioRhyme Expanded';
-    font-weight: 700;
+    font-family: 'PixAntiqua';
 }
 
 %header-small {
@@ -58,7 +57,7 @@ h1 {
 
 h2 {
     @extend %header-big;
-    font-size: 2rem;
+    font-size: 2.7rem;
 }
 
 h3 {

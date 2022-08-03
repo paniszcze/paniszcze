@@ -6,7 +6,7 @@ export default function Hero() {
             <header>
                 <h1>hi!</h1>
                 <h1>my name is</h1>
-                <h1>daniel pański</h1>
+                <h1>daniel panski</h1>
                 <h3>i make things for the web</h3>
             </header>
             <div className="info">
