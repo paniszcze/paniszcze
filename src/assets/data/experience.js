@@ -29,7 +29,7 @@ export const experience = [
         url: 'https://www.tietoevry.com/',
         position: 'intern',
         period: 'september — october ’21',
-        description: 'internship project in the field of telecomunications',
+        description: 'internship project in the field of telecommunications',
         tasks: [
             'working in a group of interns to develop a communication platform simulating data flow in LTE',
             'solving and peer reviewing problem sets in C language',

@@ -13,7 +13,7 @@ export default function Timeline() {
                         </div>
                         <div className="content">
                             <h4>
-                                {record.position} @{' '}
+                                {record.position} @&nbsp;
                                 {record.url ? (
                                     <a href={record.url} rel="noreferrer" target="_blank">
                                         {record.company}
