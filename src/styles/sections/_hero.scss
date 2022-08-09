@@ -1,46 +1,110 @@
 @use '../core/variables';
 
 .hero {
-    margin: 4rem auto;
-    padding: 2rem;
-    height: calc(100vh - 8rem);
+    margin: 0 auto;
+    padding: 4rem 0;
+    min-height: 100vh;
     overflow: hidden;
-    background: hsla(139, 70%, 75%, 1);
-    background-image: radial-gradient(
-        circle farthest-corner at 10% 20%,
-        rgba(255, 252, 200, 1) 0%,
-        rgba(255, 247, 94, 1) 90%
-    );
-    border-radius: 10px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 4rem;
 
     @media screen and (max-width: 600px) {
-        justify-content: space-between;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    .hero-wrapper {
+        position: relative;
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        @media screen and (max-width: 600px) {
+            flex-grow: 1;
+        }
+    }
+
+    .portrait {
+        position: absolute;
+        display: block;
+        width: 100%;
+        bottom: -60px;
+        right: -10px;
+        text-align: right;
+        background-color: transparent;
+        z-index: 2;
+
+        @media screen and (max-width: 1024px) {
+            right: -70px;
+        }
+
+        @media screen and (max-width: 800px) {
+            right: -120px;
+        }
+    }
+
+    .greeting {
+        width: 100%;
+        margin-top: 9.4rem;
+        padding: 3rem;
+        background-image: radial-gradient(
+            circle farthest-corner at 90% 20%,
+            rgba(255, 252, 200, 1) 0%,
+            rgba(255, 236, 129, 1) 90%
+        );
+        border-radius: 10px;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width: 600px) {
+            margin-top: 0;
+            flex-grow: 1;
+        }
+    }
+
+    header {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: start;
+        z-index: 10;
     }
 
     h3 {
         margin-top: 1rem;
+        font-family: 'PixAntiqua';
     }
 
     .info {
+        width: 100%;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .info-list {
+        display: flex;
+        flex-direction: row;
         align-items: center;
         gap: 3rem;
 
         @media screen and (max-width: 800px) {
-            flex-direction: row;
-            justify-content: space-between;
+            gap: 2rem;
         }
     }
 
-    .location {
-        height: 40px;
+    .info-item {
+        height: 3rem;
+        font-weight: 300;
         display: flex;
         justify-content: center;
         align-items: center;

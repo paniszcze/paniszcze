@@ -3,7 +3,7 @@
 .socials {
     position: fixed;
     width: 15%;
-    bottom: 0;
+    top: 0;
     left: 0;
     transition: variables.$transition;
     z-index: 10;
@@ -16,14 +16,33 @@
         font-size: 1.4rem;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         gap: 1rem;
 
-        &::after {
+        &::before {
             content: '';
             width: 1px;
-            height: calc(100vh * 0.15);
-            background-color: rgba(variables.$color-primary, 1);
+            height: min(3rem, calc(100vh * 0.15));
+            background-color: rgba(variables.$color-sienna, 1);
+        }
+    }
+
+    li {
+        text-align: center;
+        will-change: transform;
+        transition: variables.$transition;
+
+        &:hover {
+            transform: translateY(3px);
+        }
+    }
+
+    a {
+        color: rgba(variables.$color-sienna, 1);
+
+        &:hover {
+            color: rgba(variables.$color-livid, 1);
         }
     }
 
@@ -38,7 +57,7 @@
             flex-direction: row;
             justify-content: space-around;
 
-            &:after {
+            &:before {
                 display: none;
             }
         }

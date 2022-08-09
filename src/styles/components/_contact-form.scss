@@ -43,6 +43,7 @@ form {
 }
 
 .contact-icon {
+    color: rgba(variables.$color-text, 0.3);
     position: absolute;
     font-size: 14px;
     top: 23px;
@@ -53,7 +54,7 @@ form {
 
 input:focus + .contact-icon,
 textarea:focus + .contact-icon {
-    color: rgba(variables.$color-primary, 1);
+    color: rgba(variables.$color-sienna, 1);
 }
 
 ::placeholder {

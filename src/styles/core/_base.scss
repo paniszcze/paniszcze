@@ -76,27 +76,28 @@ h5 {
 }
 
 a {
-    color: rgba(variables.$color-primary, 1);
+    color: rgba(variables.$color-livid, 1);
     transition: variables.$transition;
 
     &:hover {
-        color: rgba(variables.$color-highlight, 1);
+        color: rgba(variables.$color-lavender, 1);
     }
 }
 
 .btn {
     display: inline-block;
-    color: rgba(variables.$color-bg, 1);
-    background: rgba(variables.$color-primary, 1);
+    color: rgba(variables.$color-white, 1);
+    background: rgba(variables.$color-livid, 1);
     padding: 0.75rem 1.2rem;
     cursor: pointer;
-    border: 1px solid rgba(variables.$color-primary, 1);
+    border: 1px solid rgba(variables.$color-livid, 1);
     border-radius: 4px;
     transition: variables.$transition;
 
     &:hover {
-        background-color: rgba(variables.$color-highlight, 1);
+        background-color: rgba(variables.$color-lavender, 1);
         color: rgba(variables.$color-bg, 1);
         border-color: transparent;
+        transform: translateY(3px);
     }
 }
