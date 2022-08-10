@@ -1,8 +1,9 @@
 @use 'variables';
 
 .app {
-    width: variables.$container-width-lg;
     margin: 0 auto;
+    width: variables.$container-width-lg;
+    min-width: 260px;
 
     @media screen and (max-width: 1024px) {
         width: variables.$container-width-md;

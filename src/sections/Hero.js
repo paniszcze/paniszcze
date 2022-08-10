@@ -11,10 +11,10 @@ export default function Hero() {
                 <div className="greeting">
                     <header>
                         <h1>
-                            hi! <br />
+                            <span className="breakable">hi!</span>
                             my name is <br /> daniel panski
                         </h1>
-                        <h3>i make things for the web</h3>
+                        <h3>my pixels are showing? oh my!</h3>
                     </header>
                 </div>
             </div>
@@ -29,7 +29,7 @@ export default function Hero() {
                 </ul>
                 <div className="cta">
                     <a href="#contact" className="btn">
-                        contact me
+                        contact&nbsp;me
                     </a>
                 </div>
             </div>
