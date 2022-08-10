@@ -1,14 +1,19 @@
+import Socials from '../components/Socials';
+
 export default function Footer() {
     return (
         <footer>
-            built by{' '}
-            <a
-                href="https://github.com/paniszcze/paniszcze.github.io"
-                rel="noreferrer"
-                target="_blank">
-                paniszcze
-            </a>
-            , 2022
+            <Socials />
+            <p>
+                built by{' '}
+                <a
+                    href="https://github.com/paniszcze/paniszcze.github.io"
+                    rel="noreferrer"
+                    target="_blank">
+                    paniszcze
+                </a>
+                , 2022
+            </p>
         </footer>
     );
 }
