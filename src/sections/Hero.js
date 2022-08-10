@@ -1,6 +1,8 @@
 import { HiOutlineLocationMarker, HiBriefcase } from 'react-icons/hi';
 import HeroImage from '../assets/images/hero.png';
 
+import Prompter from '../components/Prompter';
+
 export default function Hero() {
     return (
         <div className="hero">
@@ -14,7 +16,7 @@ export default function Hero() {
                             <span className="breakable">hi!</span>
                             my name is <br /> daniel panski
                         </h1>
-                        <h3>my pixels are showing? oh my!</h3>
+                        <Prompter />
                     </header>
                 </div>
             </div>
