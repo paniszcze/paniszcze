@@ -3,11 +3,11 @@
     "name": "web portfolio of daniel panski",
     "icons": [
         {
-          "src": "favicon.ico",
-          "sizes": "64x64",
-          "type": "image/x-icon"
+            "src": "favicon.ico",
+            "sizes": "64x64",
+            "type": "image/x-icon"
         }
-      ],
+    ],
     "start_url": ".",
     "display": "standalone",
     "theme_color": "#000000",
