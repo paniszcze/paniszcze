@@ -1,3 +1,5 @@
+import { greetings } from '../assets/data/greetings';
+
 import { HiOutlineLocationMarker, HiBriefcase } from 'react-icons/hi';
 import HeroImage from '../assets/images/hero.png';
 
@@ -16,7 +18,7 @@ export default function Hero() {
                             <span className="breakable">hi!</span>
                             my name is <br /> daniel panski
                         </h1>
-                        <Prompter />
+                        <Prompter lines={greetings} />
                     </header>
                 </div>
             </div>

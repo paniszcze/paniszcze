@@ -1,15 +1,13 @@
-import { experience } from '../assets/data/experience';
-
-export default function Timeline() {
+export default function Timeline({ events }) {
     return (
         <ul className="timeline">
-            {experience &&
-                experience.map((record, index) => (
+            {events &&
+                events.map((record, index) => (
                     <li className="record" key={index}>
                         <div className="opposite">{record.period}</div>
                         <div className="separator">
                             <span className="dot"></span>
-                            {index !== experience.length - 1 && <span className="line"></span>}
+                            {index !== events.length - 1 && <span className="line"></span>}
                         </div>
                         <div className="content">
                             <h4>

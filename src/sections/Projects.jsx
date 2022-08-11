@@ -1,3 +1,5 @@
+import { projects } from '../assets/data/projects';
+
 import ProjectList from '../components/ProjectList';
 
 export default function Projects() {
@@ -7,7 +9,7 @@ export default function Projects() {
                 <h5>featured works</h5>
                 <h2>projects</h2>
             </header>
-            <ProjectList />
+            <ProjectList projects={projects} />
         </section>
     );
 }

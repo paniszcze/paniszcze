@@ -2,6 +2,7 @@
 
 .current {
     display: inline-block;
+    white-space: pre-wrap;
     padding-left: 2px;
     background-color: variables.$color-white;
     animation: blink 1s infinite step-start;

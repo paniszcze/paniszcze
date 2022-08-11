@@ -1,3 +1,5 @@
+import { experience } from '../assets/data/experience';
+
 import Timeline from '../components/Timeline';
 
 export default function Experience() {
@@ -7,7 +9,7 @@ export default function Experience() {
                 <h5>relevant experience</h5>
                 <h2>career</h2>
             </header>
-            <Timeline />
+            <Timeline events={experience} />
         </section>
     );
 }
