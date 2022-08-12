@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import axios from 'axios';
+
+import { AxiosContext } from '../contexts/AxiosContext';
 
 import { FaUser, FaAt, FaEnvelope } from 'react-icons/fa';
 
@@ -8,7 +10,7 @@ export default function ContactForm() {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
-    const [isPending, setIsPending] = useState(false);
+    const { isPending, setIsPending } = useContext(AxiosContext);
 
     axios.interceptors.request.use(
         function (config) {
