@@ -8,6 +8,28 @@ export default function ContactForm() {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
+    const [isPending, setIsPending] = useState(false);
+
+    axios.interceptors.request.use(
+        function (config) {
+            setIsPending(true);
+            return config;
+        },
+        function (error) {
+            return Promise.reject(error);
+        }
+    );
+    axios.interceptors.response.use(
+        function (response) {
+            setIsPending(false);
+            return response;
+        },
+        function (error) {
+            setIsPending(false);
+            return Promise.reject(error);
+        }
+    );
+
     const sendEmail = (e) => {
         // prevent page refresh
         e.preventDefault();
@@ -69,7 +91,10 @@ export default function ContactForm() {
                     <FaEnvelope />
                 </label>
             </div>
-            <button type="submit" className="btn">
+            <button
+                type="submit"
+                className={`btn${isPending ? ' disabled' : ''}`}
+                disabled={isPending}>
                 send
             </button>
         </form>
