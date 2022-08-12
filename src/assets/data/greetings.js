@@ -3,5 +3,6 @@ export const greetings = [
     'my pixels are showing? oh my!',
     'programming enthusiast',
     "there's always something to learn",
-    '011001100110111101101111',
+    'i appreciate the value of good design',
+    'who you calling program, program?',
 ];
