@@ -1,0 +1,130 @@
+@use '../core/variables';
+
+.monitor {
+    grid-area: monitor;
+    min-height: 200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .tile {
+        position: absolute;
+        left: 10%;
+        width: 70%;
+        height: 100%;
+        background-image: linear-gradient(
+            220deg,
+            rgba(252, 255, 222, 1) 2.2%,
+            rgba(182, 241, 171, 1) 99.3%
+        );
+        border-radius: 8px;
+        z-index: -1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // SVG MONITOR DISPLAY SWITCH
+    // IDLE: initial state on load, waiting for jobs, shows animated dots
+    &.idle {
+        #screen-bg {
+            fill: #76826d;
+        }
+
+        #envelope {
+            display: none;
+        }
+    }
+    // PENDING: axios request being handled, shows animated envelope
+    &.pending {
+        #screen-bg {
+            fill: #76826d;
+        }
+
+        #dots {
+            display: none;
+        }
+    }
+    // ERROR: HTTP response error, paints the screen red
+    &.error {
+        #screen-bg {
+            fill: #ff495c;
+        }
+
+        #dots,
+        #envelope {
+            display: none;
+        }
+    }
+    // SUCCESS: HTTP response success, paint the screen green
+    &.success {
+        #screen-bg {
+            fill: #90f17e;
+        }
+
+        #dots,
+        #envelope {
+            display: none;
+        }
+    }
+}
+
+// SVG ELEMENTS
+#monitor {
+    width: 100%;
+}
+
+// SVG ANIMATIONS
+// three dots disappearing successively
+$dot-blink: 3s;
+@for $i from 1 through 3 {
+    #dot#{$i} {
+        animation: dots $dot-blink infinite step-start;
+        animation-delay: ($dot-blink/3) * $i;
+    }
+}
+@keyframes dots {
+    0% {
+        opacity: 1;
+    }
+    25% {
+        opacity: 0;
+    }
+}
+// diodes blinking randomly
+@function randomNum($min, $max) {
+    $rand: random();
+    $randomNum: $min + floor($rand * (($max - $min) + 1));
+    @return $randomNum;
+}
+@for $i from 1 through 3 {
+    #diode#{$i} {
+        animation: diodes #{randomNum(200, 2000)}ms infinite step-start;
+    }
+}
+@keyframes diodes {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+// letter slipping into envelope
+$env-blink: 2s;
+@for $i from 1 through 3 {
+    #envelope > *:nth-child(#{$i}) {
+        opacity: 0;
+        animation: envs $env-blink infinite step-end;
+        animation-delay: ($env-blink/3) * ($i - 1);
+    }
+}
+@keyframes envs {
+    0% {
+        opacity: 1;
+    }
+    33% {
+        opacity: 0;
+    }
+}

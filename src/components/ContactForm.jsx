@@ -10,11 +10,13 @@ export default function ContactForm() {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
-    const { isPending, setIsPending } = useContext(AxiosContext);
+    const { isPending, setIsPending, setResponse, setError } = useContext(AxiosContext);
 
     axios.interceptors.request.use(
         function (config) {
             setIsPending(true);
+            setError(null);
+            setResponse(null);
             return config;
         },
         function (error) {
@@ -43,8 +45,8 @@ export default function ContactForm() {
                 email: email,
                 message: message,
             })
-            .then((response) => console.log(response))
-            .catch((error) => console.log(error));
+            .then((response) => setResponse(response))
+            .catch((error) => setError(error));
         // reset form inputs
         [setName, setEmail, setMessage].forEach((f) => f(''));
     };

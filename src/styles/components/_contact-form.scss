@@ -1,6 +1,7 @@
 @use '../core/variables';
 
 form {
+    grid-area: form;
     margin: 0 auto;
     width: 100%;
     display: flex;
