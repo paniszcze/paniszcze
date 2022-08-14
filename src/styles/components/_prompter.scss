@@ -1,6 +1,10 @@
 @use '../core/variables';
 
-.current {
+.last-word {
+    white-space: nowrap;
+}
+
+.current-char {
     display: inline-block;
     white-space: pre-wrap;
     background-color: variables.$color-white;

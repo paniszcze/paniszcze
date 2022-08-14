@@ -57,10 +57,15 @@ export default function Prompter({ lines }) {
         }
     }, delay);
 
+    const lastWord = display.split(' ').pop();
+
     return (
         <h3>
-            {display.slice(0, -1)}
-            <span className="current">{display ? display.slice(-1) : '  '}</span>
+            {`${display.split(' ').slice(0, -1).join(' ')} `}
+            <span className="last-word">
+                {lastWord.slice(0, -1)}
+                <span className="current-char">{display ? lastWord.slice(-1) : '  '}</span>
+            </span>
         </h3>
     );
 }
