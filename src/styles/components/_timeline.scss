@@ -20,7 +20,7 @@
                 font-weight: 300;
                 line-height: 1.6rem;
 
-                @media screen and (max-width: 430px) {
+                @media screen and (max-width: 800px) {
                     margin: 0 0 0.3rem 1rem;
                     font-size: 0.9rem;
                 }
@@ -42,11 +42,13 @@
             font-size: 1.3rem;
             font-weight: 300;
 
-            @media screen and (max-width: 430px) {
+            @media screen and (max-width: 800px) {
                 writing-mode: vertical-rl;
                 text-orientation: sideways;
                 text-align: left;
                 padding-top: 0.7rem;
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
                 flex: 0;
             }
         }
@@ -54,11 +56,11 @@
         &:nth-of-type(even) {
             flex-direction: row-reverse;
 
-            @media screen and (max-width: 430px) {
+            @media screen and (max-width: 800px) {
                 flex-direction: row;
             }
 
-            @media screen and (min-width: 431px) {
+            @media screen and (min-width: 801px) {
                 .content {
                     text-align: right;
 
@@ -78,7 +80,8 @@
         }
 
         &:last-of-type {
-            .content {
+            .content,
+            .opposite {
                 margin-bottom: 0;
             }
         }
