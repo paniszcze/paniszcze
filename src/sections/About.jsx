@@ -1,3 +1,4 @@
+import { ReactComponent as DinoRider } from '../assets/images/dino.svg';
 import {
     SiHtml5,
     SiCss3,
@@ -15,7 +16,10 @@ import {
 export default function About() {
     return (
         <section className="about">
-            <div className="portrait"></div>
+            <div className="portrait">
+                <div className="tile"></div>
+                <DinoRider />
+            </div>
             <header>
                 <h5>get to know me</h5>
                 <h2>about</h2>
