@@ -8,6 +8,10 @@
     justify-content: center;
     align-items: center;
 
+    @media screen and (max-width: 800px) {
+        margin-top: 1rem;
+    }
+
     .tile {
         position: absolute;
         left: 10%;
@@ -23,6 +27,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media screen and (max-width: 800px) {
+            left: 7%;
+            top: 10%;
+            width: 86%;
+            height: 85%;
+        }
     }
 
     // SVG MONITOR DISPLAY SWITCH
@@ -32,8 +43,8 @@
             fill: #76826d;
         }
 
-        #envelope {
-            display: none;
+        #dots {
+            display: inline;
         }
     }
     // PENDING: axios request being handled, shows animated envelope
@@ -42,8 +53,8 @@
             fill: #76826d;
         }
 
-        #dots {
-            display: none;
+        #envelope {
+            display: inline;
         }
     }
     // ERROR: HTTP response error, paints the screen red
@@ -52,9 +63,8 @@
             fill: #ff495c;
         }
 
-        #dots,
-        #envelope {
-            display: none;
+        #x-mark {
+            display: inline;
         }
     }
     // SUCCESS: HTTP response success, paint the screen green
@@ -63,9 +73,8 @@
             fill: #90f17e;
         }
 
-        #dots,
-        #envelope {
-            display: none;
+        #check-mark {
+            display: inline;
         }
     }
 }
@@ -81,7 +90,7 @@ $dot-blink: 3s;
 @for $i from 1 through 3 {
     #dot#{$i} {
         animation: dots $dot-blink infinite step-start;
-        animation-delay: ($dot-blink/3) * $i;
+        animation-delay: calc($dot-blink / 3) * $i;
     }
 }
 @keyframes dots {
@@ -100,7 +109,7 @@ $dot-blink: 3s;
 }
 @for $i from 1 through 3 {
     #diode#{$i} {
-        animation: diodes #{randomNum(200, 2000)}ms infinite step-start;
+        animation: diodes #{randomNum(200, 2000)}ms infinite step-end;
     }
 }
 @keyframes diodes {
@@ -117,7 +126,7 @@ $env-blink: 2s;
     #envelope > *:nth-child(#{$i}) {
         opacity: 0;
         animation: envs $env-blink infinite step-end;
-        animation-delay: ($env-blink/3) * ($i - 1);
+        animation-delay: calc($env-blink / 3) * ($i - 1);
     }
 }
 @keyframes envs {
@@ -126,5 +135,24 @@ $env-blink: 2s;
     }
     33% {
         opacity: 0;
+    }
+}
+// floating
+#check-mark,
+#x-mark {
+    animation: float 3s infinite step-end;
+}
+@keyframes float {
+    0% {
+        transform: translateY(-1%);
+    }
+    25% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(1%);
+    }
+    75% {
+        transform: translateY(0);
     }
 }
