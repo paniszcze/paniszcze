@@ -1,7 +1,7 @@
 {
-    "name": "paniszcze.github.io",
+    "name": "danielpanski.dev",
     "version": "0.1.0",
-    "homepage": "https://paniszcze.github.io/",
+    "homepage": "https://danielpanski.dev/",
     "private": true,
     "dependencies": {
         "axios": "^0.27.2",
