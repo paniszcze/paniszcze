@@ -1,7 +1,7 @@
 import { greetings } from '../assets/data/greetings';
 
 import { HiOutlineLocationMarker, HiBriefcase } from 'react-icons/hi';
-import HeroImage from '../assets/images/hero.png';
+import { ReactComponent as HeroImg } from '../assets/images/hero.svg';
 
 import Prompter from '../components/Prompter';
 
@@ -9,9 +9,7 @@ export default function Hero() {
     return (
         <div className="hero">
             <div className="hero-wrapper">
-                <div className="portrait">
-                    <img src={HeroImage} alt="my pixel portrait" />
-                </div>
+                <HeroImg />
                 <div className="greeting">
                     <header>
                         <h1>

@@ -43,34 +43,20 @@
         }
     }
 
-    .portrait {
+    #me {
         position: absolute;
-        display: inline-block;
-        margin-right: -2rem;
+        margin-right: 10%;
+        height: 100%;
         align-self: flex-end;
-        bottom: -12%;
-        background-color: transparent;
         z-index: 2;
 
-        @media screen and (max-width: 1140px) {
-            margin-right: -5rem;
+        @media screen and (max-width: 1180px) {
+            margin-right: -10%;
         }
 
         @media screen and (max-width: 800px) {
-            margin-right: 0;
+            margin-right: unset;
             align-self: center;
-            bottom: unset;
-            top: 0;
-
-            img {
-                height: clamp(560px, 82vh, 800px);
-            }
-        }
-
-        @media screen and (max-width: 400px) {
-            img {
-                height: clamp(480px, 82vh, 560px);
-            }
         }
     }
 
@@ -108,7 +94,7 @@
             content: '\00000a';
             white-space: pre;
 
-            // UNCOMMENT TO INLINE 'HI!' INSEAD OF BREAKING
+            // inline 'hi!' instead of breaking
             // @media screen and (max-width: 400px) {
             //     content: ' ';
             // }
