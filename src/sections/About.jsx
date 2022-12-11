@@ -7,7 +7,6 @@ import {
     SiTypescript,
     SiNodedotjs,
     SiReact,
-    SiNestjs,
     SiFirebase,
     SiC,
     SiGit,
@@ -27,24 +26,16 @@ export default function About() {
             <div className="description">
                 <p>
                     i'm a&nbsp;technical university graduate and&nbsp;natural languages aficionado
-                    with a&nbsp;passion for&nbsp;developing things for&nbsp;the&nbsp;web.
-                    i&nbsp;love creating practical applications centred around a&nbsp;stunning user
-                    experience.
+                    with a&nbsp;passion for&nbsp;developing practical applications centered around
+                    a&nbsp;stunning user experience.
                 </p>
                 <p>
-                    my interest in&nbsp;web goes back to&nbsp;the late 2000s, when as
+                    my interest in&nbsp;writing code manifested in&nbsp;the late 2000s when as
                     a&nbsp;sixth-grader i&nbsp;used to&nbsp;make basic html websites about
                     dinosaurs. even though i&nbsp;didn't pursue a&nbsp;career in&nbsp;IT (nor
                     paleontology), after over a&nbsp;decade of&nbsp;university education
                     and&nbsp;diverse professional experience, i&nbsp;have come full circle
-                    to&nbsp;rediscover my passion for&nbsp;programming. with&nbsp;dinosaurs
-                    or&nbsp;not &mdash; i'm making my way into the&nbsp;world of&nbsp;web
-                    development.
-                </p>
-                <p>
-                    i've recently relocated to&nbsp;Barcelona and&nbsp;am looking for&nbsp;new
-                    opportunities in&nbsp;this city. if&nbsp;you're interested in&nbsp;working
-                    together, don't hesitate to&nbsp;<a href="#contact">contact me</a>.
+                    to&nbsp;rediscover my passion for&nbsp;programming.
                 </p>
                 <p>here's some tech i'm familiar with:</p>
                 <div className="skills">
@@ -55,7 +46,6 @@ export default function About() {
                     <SiTypescript />
                     <SiReact />
                     <SiNodedotjs />
-                    <SiNestjs />
                     <SiFirebase />
                     <SiC />
                     <SiGit />
