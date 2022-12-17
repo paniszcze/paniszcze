@@ -7,7 +7,7 @@ export const experience = [
         description:
             'internship in a team developing and integrating paywall functionalities for major publishing portals',
         tasks: [
-            'scaffolding a new module for a publishing CMS in TypeScript',
+            'scaffolding a new module in TypeScript for a publishing CMS',
             'using open source libraries and frameworks such as React and NestJS, as well as internal dev tools',
             'working and reporting in a project managed according to Scrum standards',
         ],
@@ -17,7 +17,7 @@ export const experience = [
         url: 'https://www.tietoevry.com/',
         position: 'junior software engineer',
         period: 'november ’21 — january ’22',
-        description: 'working experience in telecommunications development',
+        description: 'industry experience in telecommunications development',
         tasks: [
             'working in a team responsible for maintenance and continued improvement of 4G and 5G solutions',
             'running tests, analysing logs and legacy code',

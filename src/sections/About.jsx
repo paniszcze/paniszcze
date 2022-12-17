@@ -26,8 +26,8 @@ export default function About() {
             <div className="description">
                 <p>
                     i'm a&nbsp;technical university graduate and&nbsp;natural languages aficionado
-                    with a&nbsp;passion for&nbsp;developing practical applications centered around
-                    a&nbsp;stunning user experience.
+                    with a&nbsp;passion for&nbsp;developing practical applications created
+                    with the&nbsp;user experience in&nbsp;mind.
                 </p>
                 <p>
                     my interest in&nbsp;writing code manifested in&nbsp;the late 2000s when as

@@ -1,8 +1,7 @@
 export const greetings = [
-    'i make things for the web',
     'my pixels are showing? oh my!',
-    'programming enthusiast',
-    "there's always something to learn",
-    'i appreciate the value of good design',
+    'i enjoy writing code',
+    "i'm always learning new things",
     'who you calling program, program?',
+    'i appreciate the value of good design',
 ];
