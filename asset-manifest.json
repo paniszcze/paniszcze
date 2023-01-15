@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.b6bbe7d8.css",
-    "main.js": "/static/js/main.795a1f30.js",
+    "main.css": "/static/css/main.11ede925.css",
+    "main.js": "/static/js/main.de2dafba.js",
+    "static/media/jarekskurzynski_screenshot.png": "/static/media/jarekskurzynski_screenshot.1d1e0e972fccb7bb9780.png",
     "static/media/kana_flashcards_screenshot.png": "/static/media/kana_flashcards_screenshot.1bd2747278b26e3ab4f2.png",
     "static/media/exlibris_screenshot.png": "/static/media/exlibris_screenshot.a7b9dbeec6d8f1469c5a.png",
     "static/media/kiiboodo_screenshot.png": "/static/media/kiiboodo_screenshot.a1a5f38b06cab20b1cce.png",
@@ -9,15 +10,16 @@
     "static/media/hero.svg": "/static/media/hero.b87e9572007d4b3670b9ac641b53ebb3.svg",
     "static/media/monitor.svg": "/static/media/monitor.369d0bcec02f9e1047298fa528ddedce.svg",
     "static/media/dino.svg": "/static/media/dino.442fd6262676937cd3df45ef9733e143.svg",
-    "static/media/kana_flashcards.svg": "/static/media/kana_flashcards.c0372f3fd0b62d58f732.svg",
-    "static/media/kiiboodo.svg": "/static/media/kiiboodo.76f7df433bd9e71afd8e.svg",
-    "static/media/exlibris.svg": "/static/media/exlibris.fe6b42a6751393fa6376.svg",
+    "static/media/jarekskurzynski.svg": "/static/media/jarekskurzynski.5af16c23af6ed4693aef.svg",
+    "static/media/kana_flashcards.svg": "/static/media/kana_flashcards.054980efa09418f60b51.svg",
+    "static/media/kiiboodo.svg": "/static/media/kiiboodo.1c525078fb244a14f6e2.svg",
+    "static/media/exlibris.svg": "/static/media/exlibris.4136f888b23de41171a3.svg",
     "index.html": "/index.html",
-    "main.b6bbe7d8.css.map": "/static/css/main.b6bbe7d8.css.map",
-    "main.795a1f30.js.map": "/static/js/main.795a1f30.js.map"
+    "main.11ede925.css.map": "/static/css/main.11ede925.css.map",
+    "main.de2dafba.js.map": "/static/js/main.de2dafba.js.map"
   },
   "entrypoints": [
-    "static/css/main.b6bbe7d8.css",
-    "static/js/main.795a1f30.js"
+    "static/css/main.11ede925.css",
+    "static/js/main.de2dafba.js"
   ]
 }
