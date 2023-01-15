@@ -32,22 +32,26 @@ export default function ProjectTile({ title, img, description, tags, url, source
                     ))}
                 </ul>
                 <div className="external-links">
-                    <a
-                        style={{ color: theme.highlight }}
-                        href={source}
-                        rel="noreferrer"
-                        target="_blank"
-                        alt="view source code">
-                        <FiCode />
-                    </a>
-                    <a
-                        style={{ color: theme.highlight }}
-                        href={url}
-                        rel="noreferrer"
-                        target="_blank"
-                        aly="view live demo">
-                        <FiExternalLink />
-                    </a>
+                    {source && (
+                        <a
+                            style={{ color: theme.highlight }}
+                            href={source}
+                            rel="noreferrer"
+                            target="_blank"
+                            alt="view source code">
+                            <FiCode />
+                        </a>
+                    )}
+                    {url && (
+                        <a
+                            style={{ color: theme.highlight }}
+                            href={url}
+                            rel="noreferrer"
+                            target="_blank"
+                            aly="view live demo">
+                            <FiExternalLink />
+                        </a>
+                    )}
                 </div>
             </div>
         </div>

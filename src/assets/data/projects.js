@@ -1,5 +1,14 @@
 export const projects = [
     {
+        title: 'Jarek Skurzyński',
+        img: 'jarekskurzynski',
+        description: 'Website of the Polish writer Jarek Skurzyński',
+        tags: ['HTML', 'CSS', 'JavaScript', 'React', 'React Router'],
+        url: 'https://jarekskurzynski.com',
+        source: '',
+        theme: { primary: '#f8dfdb', text: '#000000', highlight: '#c64191' },
+    },
+    {
         title: 'exLibris',
         img: 'exlibris',
         description: 'Online book cataloguing tool',
