@@ -23,7 +23,7 @@ export default function Hero() {
             <div className="info">
                 <ul className="info-list">
                     <li className="info-item">
-                        <HiOutlineLocationMarker /> Barcelona, Spain
+                        <HiOutlineLocationMarker /> Brussels, Belgium
                     </li>
                     <li className="info-item">
                         <HiBriefcase /> ...on the lookout!
