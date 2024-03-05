@@ -1,4 +1,4 @@
-import { FaLinkedinIn } from 'react-icons/fa';
+// import { FaLinkedinIn } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
 import { SiCodewars } from 'react-icons/si';
 
@@ -6,14 +6,14 @@ export default function Socials() {
     return (
         <div className="socials">
             <ul>
-                <li>
+                {/* <li>
                     <a
                         href="https://www.linkedin.com/in/daniel-panski/"
                         rel="noreferrer"
                         target="_blank">
                         <FaLinkedinIn />
                     </a>
-                </li>
+                </li> */}
                 <li>
                     <a href="https://github.com/paniszcze" rel="noreferrer" target="_blank">
                         <FaGithub />
